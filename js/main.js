@@ -20,15 +20,17 @@ var $menu = document.getElementById('menu');
 $burguerButton.addEventListener('touchstart', toggleMenu);
 function toggleMenu(){
     $menu.classList.toggle('active');
-    // document.getElementById('burguer-button').innerHTML = '&#xf00d;';
+    if ($burguerButton.className == 'burguer-button fa fa-bars') {
+        $burguerButton.className = 'burguer-button fa fa-close';
+    }else {
+        $burguerButton.className = 'burguer-button fa fa-bars';
+    }
 }
 function showMenu(){
     $menu.classList.add('active');
-    // document.getElementById('burguer-button').innerHTML = '&#xf00d;';
 }
 function hideMenu(){
     $menu.classList.remove('active');
-    // document.getElementById('burguer-button').innerHTML = '&#xf00d;';
 }
 
 //Gestos touch

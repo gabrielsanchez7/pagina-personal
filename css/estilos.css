@@ -21,9 +21,7 @@ header {
 .menu {
     display: flex;
     align-items: center;
-    color: #525252;
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
 }
 .menu li {
     display: inline-block;
@@ -33,9 +31,17 @@ header {
     transition: 0.25s;
     cursor: pointer;
 }
+.menu li a {
+    font-size: 14px;
+    color: #525252;
+    text-decoration: none;
+}
 .menu li:hover {
     box-shadow: inset 0 -5px 0 0 #00ae9a;
     color: #e7e7e7;
+}
+.menu li:hover a {
+    color: white;
 }
 .menu img {
     margin: 10px 10px 10px 30px;
@@ -207,10 +213,12 @@ ul.redes-sociales li{
         top: 0;
         bottom: 0;
         z-index: 1;
-        color: #d3d3d3;
         /*padding: 0 150px;*/
         width: 100%;
         transition: 0.25s;
+    }
+    .menu li a {
+        color: #d3d3d3;
     }
     .icon-close {
         content: '&#xf00d;';
