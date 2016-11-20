@@ -16,9 +16,29 @@
 // });
 var $burguerButton = document.getElementById('burguer-button');
 var $menu = document.getElementById('menu');
+var $burguerIcon = document.getElementById('burguer-icon');
 
 $burguerButton.addEventListener('touchstart', toggleMenu);
 function toggleMenu(){
     $menu.classList.toggle('active');
-    // document.getElementById('burguer-button').innerHTML = '&#xf00d;';
+    if ($burguerIcon.className == 'fa fa-bars') {
+        $burguerIcon.className = 'fa fa-close';
+    }else {
+        $burguerIcon.className = 'fa fa-bars';
+    }
 }
+function showMenu(){
+    $menu.classList.add('active');
+    $burguerIcon.className = 'fa fa-close';
+}
+function hideMenu(){
+    $menu.classList.remove('active');
+    $burguerIcon.className = 'fa fa-bars'
+}
+
+//Gestos touch
+var $body = document.body;
+
+var gestosTouch = new Hammer($body);
+gestosTouch.on('swipeleft', showMenu);
+gestosTouch.on('swiperight', hideMenu);
