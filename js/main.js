@@ -29,19 +29,11 @@ function toggleMenu(){
 }
 function showMenu(){
     $menu.classList.add('active');
-    if ($burguerIcon.className == 'fa fa-bars') {
-        $burguerIcon.className = 'fa fa-close';
-    }else {
-        $burguerIcon.className = 'fa fa-bars';
-    }
+    $burguerIcon.className = 'fa fa-close';
 }
 function hideMenu(){
     $menu.classList.remove('active');
-    if ($burguerIcon.className == 'fa fa-bars') {
-        $burguerIcon.className = 'fa fa-close';
-    }else {
-        $burguerIcon.className = 'fa fa-bars';
-    }
+    $burguerIcon.className = 'fa fa-bars'
 }
 
 //Gestos touch
