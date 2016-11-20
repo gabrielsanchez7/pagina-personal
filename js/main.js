@@ -16,14 +16,15 @@
 // });
 var $burguerButton = document.getElementById('burguer-button');
 var $menu = document.getElementById('menu');
+var $burguerIcon = document.getElementById('burguer-icon');
 
 $burguerButton.addEventListener('touchstart', toggleMenu);
 function toggleMenu(){
     $menu.classList.toggle('active');
-    if ($burguerButton.className == 'burguer-button fa fa-bars') {
-        $burguerButton.className = 'burguer-button fa fa-close';
+    if ($burguerIcon.className == 'fa fa-bars') {
+        $burguerIcon.className = 'fa fa-close';
     }else {
-        $burguerButton.className = 'burguer-button fa fa-bars';
+        $burguerIcon.className = 'fa fa-bars';
     }
 }
 function showMenu(){
