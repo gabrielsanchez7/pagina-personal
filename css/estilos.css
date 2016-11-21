@@ -26,7 +26,7 @@ header {
 .menu li {
     display: inline-block;
     list-style: none;
-    padding: 0 30px;
+    padding: 0 15px;
     line-height: 70px;
     transition: 0.25s;
     cursor: pointer;
@@ -35,6 +35,11 @@ header {
     font-size: 14px;
     color: #525252;
     text-decoration: none;
+    transition: 0.25s;
+    line-height: 65px;
+    width: 85px;
+    text-align: center;
+    display: inline-block;
 }
 .menu li:hover {
     box-shadow: inset 0 -5px 0 0 #00ae9a;
@@ -47,7 +52,6 @@ header {
     margin: 10px 10px 10px 30px;
 }
 header .burguer-button {
-    font-family: 'FontAwesome';
     color: #d3d3d3;
     background-color: black;
     border-radius: 50%;
@@ -90,7 +94,6 @@ header .burguer-button {
 }
 .etiqueta-principal .datos .redes-sociales {
     list-style: none;
-    font-family: 'FontAwesome';
     margin: 20px 0;
 }
 ul.redes-sociales li{
@@ -129,7 +132,7 @@ ul.redes-sociales li{
     background-color: #0e76a8;
     border-color: #0e76a8;
 }
-.etiqueta-principal .about-me a {
+.etiqueta-principal .about-me-button a {
     font-size: 16px;
     color: #969696;
     border: 1px solid;
@@ -138,14 +141,325 @@ ul.redes-sociales li{
     text-decoration: none;
     transition: 0.25s;
 }
-.etiqueta-principal .about-me {
+.etiqueta-principal .about-me-button {
     padding-top: 15px;
     padding-left: 10px;
 }
-.etiqueta-principal .about-me a:hover {
+.etiqueta-principal .about-me-button a:hover {
     background-color: #00ae9a;
     border-color: #00ae9a;
     color: #d3d3d3;
+}
+#perfil {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+#perfil .banner {
+    background-image: url('../images/fondo-banner.jpg');
+    background-size: cover;
+    height: 100%;
+    max-height: 670px;
+    position: relative;
+}
+.slide-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    color: #d3d3d3;
+    text-align: center;
+    height: 100%;
+    min-height: 590px;
+    position: relative;
+    overflow: hidden;
+}
+.slide {
+    height: 100%;
+    min-height: 450px;
+    font-size: 18px;
+    position: absolute;
+    width: 100%;
+    max-width: 800px;
+    left: 100%;
+    top: 30px;
+}
+.slide p {
+    border-bottom: 1px solid #58595b;
+    padding: 30px 80px;
+}
+.slide.about-me h2 {
+    padding-top: 35px;
+}
+.slide.about-me .datos {
+    margin-top: 30px;
+}
+.slide.about-me li {
+    list-style: none;
+    padding: 8px 0;
+}
+.slide.about-me i {
+    margin-right: 10px;
+    /*border: 1px solid #00ae9a;*/
+    background-color: #00ae9a;
+    color: #2b2f33;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.slide-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+}
+.slide.info-academica li {
+    list-style: none;
+    display: inline-block;
+    padding: 30px 40px;
+}
+.slide.info-academica h2 {
+    padding-top: 30px;
+}
+.slide.exp-laboral li {
+    list-style: none;
+    display: inline-block;
+    padding: 30px 40px;
+    vertical-align: middle;
+}
+.slide.exp-laboral h2 {
+    padding-top: 35px;
+}
+.slide.obj-personales li {
+    list-style: none;
+    display: inline-block;
+    padding: 30px 0;
+    line-height:
+}
+.slide.obj-personales table {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 30px 0;
+}
+.slide.obj-personales table td {
+    font-size: 16px;
+    font-weight: 700;
+    width: 170px;
+}
+.slide.obj-personales h2 {
+    padding-top: 30px;
+}
+.slide.deseo-prof p {
+    border: none;
+    padding: 10px 80px;
+}
+.slide.deseo-prof h2 {
+    padding: 40px 0 30px 0;
+}
+.slide-container .color {
+    color: #00ae9a;
+}
+.banner section {
+    position: relative;
+}
+.prev, .next {
+    position: absolute;
+    top: 45%;
+    color: rgba(0, 173, 153, 0.3);
+    font-size: 30px;
+}
+.nav-circle {
+    position: absolute;
+    bottom: 60px;
+    text-align: center;
+    width: 100%;
+}
+.prev {
+    left: 0;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.next {
+    right: 0;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.nav-circle li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 2px;
+    font-size: 20px;
+    color: rgba(0, 173, 153, 0.3);
+    transition: 0.25s;
+}
+.prev:hover, .next:hover {
+    color: rgba(0, 173, 153, 0.8);
+    transform: scale(1.2);
+}
+.prev:active, .next:active {
+    transform: scale(.85);
+}
+.nav-slider .nav-circle {
+    width: 100%;
+}
+.nav-slider .nav-circle .active {
+    background-color: rgba(0, 173, 153, 0.6);
+    transform: scale(1.5);
+}
+.nav-slider .nav-circle span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 173, 153, 0.15);
+    transition: 0.25s;
+}
+.capacidades-tec {
+    color: #15222a;
+    margin-bottom: 50px;
+}
+.capacidades-tec h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin: 100px auto 30px auto;
+}
+.capacidades-tec p, .software p {
+    padding: 0 215px;
+    margin: 40px auto 40px auto;
+}
+.capacidades-tec table {
+    margin: auto;
+    width: 100%;
+}
+.capacidades-tec table td {
+    padding: 7px 0;
+    width: 25%;
+}
+.software h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 80px auto 30px auto;
+}
+.software .row-table {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.software .row-table table {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+}
+.software .row-table table tr {
+    display: flex;
+    justify-content: center;
+}
+.software .row-table table td {
+    padding: 10px;
+}
+.hobbies h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 50px auto;
+}
+.hobbies table {
+    width: 100%;
+    margin: 10px auto 50px auto;
+}
+.hobbies table td {
+    width: 25%;
+    padding: 10px 0;
+}
+.frases {
+    background-color: #15222a;
+    color: #d3d3d3;
+    padding: 50px 0;
+}
+.frases p {
+    font-family: 'Righteous', sans-serif;
+    font-size: 36px;
+}
+.frases .frase1, .frase2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 100px;
+}
+.frases i {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+    display: inline-block;
+}
+.frases i .color {
+    color: #00ae9a;
+}
+footer {
+    background-color: #090e12;
+    color: #d3d3d3;
+    text-align: center;
+    padding: 40px 0;
+}
+footer h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+}
+footer li {
+    list-style: none;
+}
+.contacto-footer {
+    margin: 20px 0;
+}
+.contacto-footer li {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 50px;
+}
+.contacto-footer li:last-child {
+    margin-right: 0;
+}
+.contacto-footer li i {
+    margin-right: 10px;
+    font-size: 22px;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: #989898;
+    color: #090e12;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.redes-footer li {
+    display: inline-block;
+    margin: 0 3px;
+}
+.redes-footer li i {
+    color: white;
+    display: inline-block;
+    width: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    background-color: gray;
+    transition: 0.25s;
+}
+.redes-footer li i:hover {
+    transform: translateY(-5px);
+}
+.redes-footer .facebook i {
+    background-color: #3b5998;
+}
+.redes-footer .twitter i {
+    background-color: #26a6d1;
+}
+.redes-footer .github i {
+    background-color: black;
+}
+.redes-footer .linkedin i {
+    background-color: #0e76a8;
 }
 @media screen and (max-width:1024px) {
     .container {
@@ -184,7 +498,7 @@ ul.redes-sociales li{
     .etiqueta-principal .foto-personal {
         margin: 60px auto;
     }
-    .datos .about-me {
+    .datos .about-me-button-button {
         margin-bottom: 50px;
     }
     /*Main*/
