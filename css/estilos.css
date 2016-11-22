@@ -23,6 +23,9 @@ header {
     align-items: center;
     font-family: 'Montserrat', sans-serif;
 }
+.menu ul {
+    display: flex;
+}
 .menu li {
     display: inline-block;
     list-style: none;
@@ -384,7 +387,7 @@ ul.redes-sociales li{
     font-family: 'Righteous', sans-serif;
     font-size: 36px;
 }
-.frases .frase1, .frase2 {
+.frases .frase1, .frases .frase2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -463,40 +466,17 @@ footer li {
     background-color: #0e76a8;
 }
 @media screen and (max-width:1024px) {
-    .container {
-        width: 100%;
-    }
+    .container { width: 100%; }
     /*Menu*/
-    header img.logo-prin {
-        margin-left: 0;
-    }
-    header img.avatar {
-        display: none;
-    }
-    header {
-        flex-direction: column;
-        margin-top: 50px;
-    }
-    header .menu {
-        padding-top: 20px;
-        justify-content: space-around;
-    }
-    .menu ul {
-        width: 100%;
-    }
-    .menu li {
-        padding: 0 40px;
-    }
+    header img.logo-prin { margin-left: 0; }
+    header img.avatar { display: none; }
+    header { flex-direction: column;
+        margin-top: 50px; }
+    header .menu { padding-top: 20px;
+        justify-content: space-around; }
+    .menu { width: 100%; }
+    .menu li { padding: 0 40px; }
     /*Menu*/
-    #perfil header {
-        margin-top: 0;
-    }
-    #perfil header img.logo-prin {
-        margin-top: 50px;
-    }
-    #perfil .banner {
-        min-height: 780px;
-    }
     /*Main*/
     .etiqueta-principal {
         flex-direction: column;
@@ -504,35 +484,55 @@ footer li {
         justify-content: center;
         height: auto;
     }
-    .etiqueta-principal .datos h1 {
-        padding-left: 30px;
-    }
-    .etiqueta-principal .foto-personal {
-        margin: 60px auto;
-    }
-    .datos .about-me-button-button {
-        margin-bottom: 50px;
-    }
+    .etiqueta-principal .datos h1 { padding-left: 30px; }
+    .etiqueta-principal .foto-personal { margin: 60px auto; }
+    .datos .about-me-button-button { margin-bottom: 50px; }
     /*Main*/
     /*Perfil*/
-
+    #perfil header { margin-top: 0; }
+    #perfil header img.logo-prin { margin-top: 50px; }
+    #perfil .banner { min-height: 780px;
+        background-position: center; }
+    .slide-container { max-width: 640px; }
+    .slide-container h2 { font-size: 40px; }
+    .slide-container p, .slide-container li { font-size: 16px; }
+    .slide.info-academica li { padding: 30px; }
+    .slide.obj-personales table td { font-size: 14px; }
+    .next { right: 90px; }
+    .prev { left: 90px; }
+    .capacidades-tec table { width: 96%; }
+    .capacidades-tec p, .software p { padding: 0 130px; }
+    .row-table { flex-wrap: wrap; }
     /*Perfil*/
 }
-@media screen and (max-width:768px) {
-    .menu li {
-        padding: 0 25px;
+@media screen and (max-width: 768px) {
+    .menu { overflow: hidden; }
+    .menu li { padding: 0 25px; }
+    .capacidades-tec table { width: 100%; }
+    .software .row-table { flex-wrap: wrap; }
+    .hobbies table {width: 97%; }
+    .contacto-footer li {
+        display: block;
+        margin: 10px auto;
     }
+    .redes-footer ul { margin-top: 50px; }
+    .frases p { font-size: 30px; margin: 0 20px; }
+    .frases .frase1, .frases .frase2 {padding: 30px 50px;}
+    .frases i { font-size: 14px; }
 }
-@media screen and (max-width:530px) {
+@media screen and (max-width: 667px) {
     header {
         justify-content: space-between;
         align-items: flex-start;
         margin: 0;
         padding: 20px;
     }
-    header img.logo-prin {
-        margin: 0;
-    }
+    #perfil header img.logo-prin { margin-top: 0; }
+    header .burguer-button { display: block; }
+    /*header img.logo-prin {
+        justify-content: flex-start;
+    }*/
+    .menu ul { display: block; }
     .menu {
         /*display: none;*/
         position: fixed;
@@ -542,40 +542,39 @@ footer li {
         top: 0;
         bottom: 0;
         z-index: 1;
-        /*padding: 0 150px;*/
         width: 100%;
         transition: 0.25s;
     }
-    .menu li a {
-        color: #d3d3d3;
-    }
-    .icon-close {
-        content: '&#xf00d;';
-    }
-    .menu.active {
-        left: 0;
-    }
+    .menu li a { color: #d3d3d3; }
+    .menu.active { left: 0; }
     .menu li {
         display: block;
         text-align: center;
         margin: auto;
         border-bottom: 1px solid #525252;
+        padding: 0 50vw;
     }
-    .menu li:last-child {
-        border: none;
-    }
+    .menu li:last-child { border: none; }
+}
+@media screen and (max-width:530px) {
     .etiqueta-principal .foto-personal {
         transform: scale(0.7);
         transition: 0.25;
         margin: auto;
     }
-    .foto-personal img{
-        width: 100%;
-    }
-    header .burguer-button {
-        display: block;
-    }
-    .etiqueta-principal .datos h1 {
-        font-size: 36px;
-    }
+    .foto-personal img{ width: 100%; }
+    header .burguer-button { display: block; }
+    .etiqueta-principal .datos h1 { font-size: 36px; }
+    /*Perfil*/
+    .slide-container h2 { font-size: 24px; }
+    .slide-container p {font-size: 14px; padding: 30px 10px; }
+    .slide-container li {font-size: 14px; }
+    .nav-slider .nav-circle { bottom: 10px; }
+    .slide.info-academica li { padding: 30px 7px; }
+    .info-academica img { transform: scale(0.75); }
+    .slide.exp-laboral li { padding: 30px 15px;
+        transform: scale(0.9); }
+    .slide.obj-personales table td { font-size: 12px; }
+    table.capacidades img {transform: scale(0.8); }
+    /*Perfil*/
 }
