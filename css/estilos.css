@@ -144,6 +144,7 @@ ul.redes-sociales li{
 .etiqueta-principal .about-me-button {
     padding-top: 15px;
     padding-left: 10px;
+    margin-bottom: 50px;
 }
 .etiqueta-principal .about-me-button a:hover {
     background-color: #00ae9a;
@@ -466,6 +467,9 @@ footer li {
         width: 100%;
     }
     /*Menu*/
+    header img.logo-prin {
+        margin-left: 0;
+    }
     header img.avatar {
         display: none;
     }
@@ -484,7 +488,15 @@ footer li {
         padding: 0 40px;
     }
     /*Menu*/
-
+    #perfil header {
+        margin-top: 0;
+    }
+    #perfil header img.logo-prin {
+        margin-top: 50px;
+    }
+    #perfil .banner {
+        min-height: 780px;
+    }
     /*Main*/
     .etiqueta-principal {
         flex-direction: column;
@@ -502,8 +514,11 @@ footer li {
         margin-bottom: 50px;
     }
     /*Main*/
+    /*Perfil*/
+
+    /*Perfil*/
 }
-@media screen and (max-width:667px) {
+@media screen and (max-width:768px) {
     .menu li {
         padding: 0 25px;
     }
