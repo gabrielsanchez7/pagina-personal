@@ -249,6 +249,21 @@ ul.redes-sociales li{
 .slide.obj-personales li img {
     margin-bottom: 15px;
 }
+.slide.obj-personales li img {
+    margin-bottom: 15px;
+    line-height:
+}
+.slide.obj-personales table {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 30px 0;
+}
+.slide.obj-personales table td {
+    font-size: 16px;
+    font-weight: 700;
+    width: 170px;
+}
 .slide.obj-personales h2 {
     padding-top: 30px;
 }
@@ -335,6 +350,26 @@ ul.redes-sociales li{
 .capacidades-tec ul {
     display: flex;
     justify-content: space-around;
+}
+.capacidades-tec ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.capacidades-tec li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    min-width: 300px;
+    margin: 30px auto;
+}
+.capacidades-tec img {
+    margin-bottom: 10px;
+}
+.capacidades-tec table {
+    margin: auto;
     width: 100%;
     flex-wrap: wrap;
 }
@@ -360,6 +395,19 @@ ul.redes-sociales li{
     justify-content: space-between;
     margin: 60px auto;
     flex-wrap: wrap;
+}
+.software .herramientas .herr-hijo {
+    width: 25%;
+    min-width: 300px;
+    margin: 30px auto;
+}
+.software .herramientas img {
+    margin-bottom: 15px;
+}
+.software .herramientas .herr-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .software .herramientas .herr-hijo {
     width: 25%;
