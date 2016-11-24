@@ -216,10 +216,17 @@ ul.redes-sociales li{
     font-weight: 700;
     font-size: 48px;
 }
+.slide.info-academica ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .slide.info-academica li {
     list-style: none;
     display: inline-block;
     padding: 30px 40px;
+    width: 25%;
+    min-width: 100px;
 }
 .slide.info-academica h2 {
     padding-top: 30px;
@@ -236,12 +243,15 @@ ul.redes-sociales li{
 .slide.obj-personales ul {
     display: flex;
     width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .slide.obj-personales li {
     list-style: none;
     display: inline-block;
     padding: 30px 0;
     width: 25%;
+    min-width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -253,16 +263,8 @@ ul.redes-sociales li{
     margin-bottom: 15px;
     line-height:
 }
-.slide.obj-personales table {
-    width: 100%;
-    max-width: 700px;
-    margin: auto;
-    padding: 30px 0;
-}
-.slide.obj-personales table td {
+.slide.obj-personales strong {
     font-size: 16px;
-    font-weight: 700;
-    width: 170px;
 }
 .slide.obj-personales h2 {
     padding-top: 30px;
@@ -393,7 +395,7 @@ ul.redes-sociales li{
 .software .herramientas {
     display: flex;
     justify-content: space-between;
-    margin: 60px auto;
+    margin: 30px auto;
     flex-wrap: wrap;
 }
 .software .herramientas .herr-hijo {
@@ -428,13 +430,19 @@ ul.redes-sociales li{
     font-weight: 400;
     margin: 50px auto;
 }
-.hobbies table {
-    width: 100%;
-    margin: 10px auto 50px auto;
+.hobbies div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
 }
-.hobbies table td {
+.hobbies ul {
     width: 25%;
-    padding: 10px 0;
+    min-width: 300px;
+    margin: 30px auto;
+}
+.hobbies li {
+    list-style: none;
 }
 .frases {
     background-color: #15222a;
@@ -523,7 +531,7 @@ footer li {
 .redes-footer .linkedin i {
     background-color: #0e76a8;
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
     .container { width: 100%; }
     /*Menu*/
     header img.logo-prin { margin-left: 0; }
@@ -555,10 +563,9 @@ footer li {
     .slide-container h2 { font-size: 40px; }
     .slide-container p, .slide-container li { font-size: 16px; }
     .slide.info-academica li { padding: 30px; }
-    .slide.obj-personales table td { font-size: 14px; }
-    .next { right: 90px; }
-    .prev { left: 90px; }
-    .capacidades-tec table { width: 96%; }
+    .slide.obj-personales strong { font-size: 14px; }
+    .next { right: 30px; }
+    .prev { left: 30px; }
     .capacidades-tec p, .software p { padding: 0 130px; }
     .row-table { flex-wrap: wrap; }
     /*Perfil*/
@@ -566,9 +573,6 @@ footer li {
 @media screen and (max-width: 768px) {
     .menu { overflow: hidden; }
     .menu li { padding: 0 25px; }
-    .capacidades-tec table { width: 100%; }
-    .software .row-table { flex-wrap: wrap; }
-    .hobbies table {width: 97%; }
     .contacto-footer li {
         display: block;
         margin: 10px auto;
@@ -614,7 +618,7 @@ footer li {
     }
     .menu li:last-child { border: none; }
 }
-@media screen and (max-width:530px) {
+@media screen and (max-width: 530px) {
     .etiqueta-principal .foto-personal {
         transform: scale(0.7);
         transition: 0.25;
@@ -627,12 +631,35 @@ footer li {
     .slide-container h2 { font-size: 24px; }
     .slide-container p {font-size: 14px; padding: 30px 10px; }
     .slide-container li {font-size: 14px; }
-    .nav-slider .nav-circle { bottom: 10px; }
+    .nav-slider .nav-circle { bottom: -60px; }
     .slide.info-academica li { padding: 30px 7px; }
     .info-academica img { transform: scale(0.75); }
     .slide.exp-laboral li { padding: 30px 15px;
         transform: scale(0.9); }
-    .slide.obj-personales table td { font-size: 12px; }
-    table.capacidades img {transform: scale(0.8); }
+    .next, .prev { top: 105%; z-index: 2; }
+    .next { right: 35px; }
+    .prev { left: 35px; }
+    .slide.about-me { top: 90px; }
+    .slide.info-academica, .slide.exp-laboral { top: 100px; }
+    .slide.obj-personales { top: 10px; }
+    .slide.deseo-prof { top: 60px; }
+    .capacidades-tec h3 { font-size: 26px; }
+    .capacidades-tec p, .software p { padding: 0 20px; }
+    .software h4 { font-size: 22px; padding: 0 10px; }
+    .frases .frase1, .frases .frase2 { padding: 30px 10px; }
+    .frase1 img, .frase2 img { transform: scale(0.5); }
+    .frases p { font-size: 18px; }
+    .frases i { font-size: 12px; }
+    footer h3 { font-size: 18px; }
     /*Perfil*/
+}
+@media screen and (max-width: 320px) {
+    header { padding: 10px; }
+    header .burguer-button { top: 20px; right: 10px; }
+    .next { right: 15px; }
+    .prev { left: 15px; }
+    .slide.info-academica { top: 10px; }
+    .slide.exp-laboral, .slide.obj-personales { top: 0; }
+    .slide.deseo-prof { top: 50px; }
+    .slide.deseo-prof p { padding: 10px 45px; }
 }
