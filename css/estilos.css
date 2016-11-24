@@ -226,7 +226,7 @@ ul.redes-sociales li{
     display: inline-block;
     padding: 30px 0;
     width: 25%;
-    min-width: 100px;
+    min-width: 150px;
 }
 .slide.info-academica h2 {
     padding-top: 30px;
@@ -640,7 +640,8 @@ footer li {
     .next { right: 35px; }
     .prev { left: 35px; }
     .slide.about-me { top: 90px; }
-    .slide.info-academica, .slide.exp-laboral { top: 100px; }
+    .slide.info-academica { top: 15px; }
+    .slide.exp-laboral { top: 100px; }
     .slide.obj-personales { top: 10px; }
     .slide.deseo-prof { top: 60px; }
     .capacidades-tec h3 { font-size: 26px; }
@@ -659,7 +660,7 @@ footer li {
     .next { right: 15px; }
     .prev { left: 15px; }
     .slide.info-academica { top: 10px; }
-    .slide.info-academica li { padding: 30px 10px; }
+    .slide.info-academica li { padding: 30px 0; }
     .slide.exp-laboral, .slide.obj-personales { top: 0; }
     .slide.deseo-prof { top: 50px; }
     .slide.deseo-prof p { padding: 10px 45px; }
