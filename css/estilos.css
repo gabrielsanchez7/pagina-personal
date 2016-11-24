@@ -224,7 +224,7 @@ ul.redes-sociales li{
 .slide.info-academica li {
     list-style: none;
     display: inline-block;
-    padding: 30px 40px;
+    padding: 30px 0;
     width: 25%;
     min-width: 100px;
 }
@@ -562,7 +562,7 @@ footer li {
     .slide-container { max-width: 640px; }
     .slide-container h2 { font-size: 40px; }
     .slide-container p, .slide-container li { font-size: 16px; }
-    .slide.info-academica li { padding: 30px; }
+    .slide.info-academica li { padding: 30px 0; }
     .slide.obj-personales strong { font-size: 14px; }
     .next { right: 30px; }
     .prev { left: 30px; }
@@ -632,7 +632,7 @@ footer li {
     .slide-container p {font-size: 14px; padding: 30px 10px; }
     .slide-container li {font-size: 14px; }
     .nav-slider .nav-circle { bottom: -60px; }
-    .slide.info-academica li { padding: 30px 7px; }
+    .slide.info-academica li { padding: 30px 0; }
     .info-academica img { transform: scale(0.75); }
     .slide.exp-laboral li { padding: 30px 15px;
         transform: scale(0.9); }
@@ -659,6 +659,7 @@ footer li {
     .next { right: 15px; }
     .prev { left: 15px; }
     .slide.info-academica { top: 10px; }
+    .slide.info-academica li { padding: 30px 10px; }
     .slide.exp-laboral, .slide.obj-personales { top: 0; }
     .slide.deseo-prof { top: 50px; }
     .slide.deseo-prof p { padding: 10px 45px; }
