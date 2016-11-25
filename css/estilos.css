@@ -276,9 +276,6 @@ ul.redes-sociales li{
 .slide.deseo-prof h2 {
     padding: 40px 0 30px 0;
 }
-.slide-container .color {
-    color: #00ae9a;
-}
 .banner section {
     position: relative;
 }
@@ -464,8 +461,79 @@ ul.redes-sociales li{
     margin-top: 10px;
     display: inline-block;
 }
-.frases i .color {
-    color: #00ae9a;
+.color { color: #00ae9a; }
+#portafolio .banner {
+    background-image: url('../images/banner-portafolio.jpg');
+    background-size: cover;
+    min-height: 570px;
+}
+.banner .intro-proy {
+    color: #d3d3d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.intro-proy img { margin: 0 50px; }
+.intro-proy div {
+    margin: 0 100px;
+    text-align: center;
+}
+.intro-proy h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.proyectos {
+    margin: 60px auto;
+}
+.proyectos ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.proyectos li {
+    text-align: center;
+    list-style: none;
+    position: relative;
+    line-height: 0;
+    color: #d3d3d3;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.proyectos li a { color: #d3d3d3; }
+.proyectos .etiqueta-proy{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    width: 100%;
+    margin: auto;
+    line-height: normal;
+    top: 55%;
+    opacity: 0;
+    transition: 0.5s;
+}
+.proyectos li:hover:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    content: '';
+    background-color: rgba(21, 34, 42, 0.75);
+}
+.proyectos li:hover .etiqueta-proy {
+    transition: 0.5s;
+    opacity: 1;
+    top: 40%;
+}
+.etiqueta-proy h3 {
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
 }
 footer {
     background-color: #090e12;
