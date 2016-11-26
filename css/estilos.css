@@ -73,6 +73,70 @@ header .burguer-button {
     width: 100%;
     margin: auto;
 }
+footer {
+    background-color: #090e12;
+    color: #d3d3d3;
+    text-align: center;
+    padding: 40px 0;
+}
+footer h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+}
+footer li {
+    list-style: none;
+}
+.contacto-footer {
+    margin: 20px 0;
+}
+.contacto-footer li {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 50px;
+}
+.contacto-footer li:last-child {
+    margin-right: 0;
+}
+.contacto-footer li i {
+    margin-right: 10px;
+    font-size: 22px;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: #989898;
+    color: #090e12;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.redes-footer li {
+    display: inline-block;
+    margin: 0 3px;
+}
+.redes-footer li i {
+    color: white;
+    display: inline-block;
+    width: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    background-color: gray;
+    transition: 0.25s;
+}
+.redes-footer li i:hover {
+    transform: translateY(-5px);
+}
+.redes-footer .facebook i {
+    background-color: #3b5998;
+}
+.redes-footer .twitter i {
+    background-color: #26a6d1;
+}
+.redes-footer .github i {
+    background-color: black;
+}
+.redes-footer .linkedin i {
+    background-color: #0e76a8;
+}
 .etiqueta-principal {
     height: calc(100vh - 90px);
     display: flex;
@@ -154,11 +218,12 @@ ul.redes-sociales li{
     border-color: #00ae9a;
     color: #d3d3d3;
 }
-#perfil {
+#perfil, #portafolio, #blog, #contacto {
     font-family: 'Ubuntu', sans-serif;
     background-color: #f3f3f3;
-    text-align: center;
+    color: #15222a;
 }
+#perfil { text-align: center; }
 #perfil .banner {
     background-image: url('../images/fondo-banner.jpg');
     background-size: cover;
@@ -536,70 +601,112 @@ ul.redes-sociales li{
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
 }
-footer {
-    background-color: #090e12;
-    color: #d3d3d3;
+#blog .banner {
+    background-image: url('../images/fondo-blog.jpg');
+    background-size: cover;
+    min-height: 670px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.art-prin {
+    margin-top: 90px;
     text-align: center;
-    padding: 40px 0;
+    color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-footer h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 26px;
-    font-weight: 400;
-}
-footer li {
-    list-style: none;
-}
-.contacto-footer {
-    margin: 20px 0;
-}
-.contacto-footer li {
-    display: inline-block;
-    font-size: 14px;
-    margin-right: 50px;
-}
-.contacto-footer li:last-child {
-    margin-right: 0;
-}
-.contacto-footer li i {
-    margin-right: 10px;
-    font-size: 22px;
-    vertical-align: middle;
-    display: inline-block;
-    background-color: #989898;
-    color: #090e12;
-    width: 40px;
+.art-prin a {
+    color: #d3d3d3;
+    text-decoration: none;
     line-height: 40px;
-    border-radius: 50%;
+    width: 140px;
+    border-radius: 40px;
+    border: 1px solid;
+    display: block;
+    transition: 0.25s;
+    font-family: 'Montserrat', sans-serif;
 }
-.redes-footer li {
-    display: inline-block;
-    margin: 0 3px;
+.art-prin a:hover {
+    background-color: #00ae9a;
+    border-color: #00ae9a;
 }
-.redes-footer li i {
-    color: white;
-    display: inline-block;
-    width: 35px;
-    line-height: 35px;
-    border-radius: 50%;
-    background-color: gray;
+.art-prin img {
+    margin: 50px auto;
+    width: 100%;
+    max-width: 618px;
+}
+.art-prin p {
+    padding: 0 250px;
+    margin-bottom: 30px;
+}
+.articulos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 60px auto;
+}
+.art {
+    width: 100%;
+    max-width: 585px;
+    display: flex;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+.art.art-1 { box-shadow: inset 0 -5px 0 0 #00365a; }
+.art.art-2 { box-shadow: inset 0 -5px 0 0 #00ae9a; }
+.art.art-3 { box-shadow: inset 0 -5px 0 0 #a54500; }
+.art h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+.art span.fecha {
+    font-size: 12px;
+    color: #58595b;
+    border-bottom: 1px solid #989898;
+    width: 100%;
+    display: block;
+    padding: 5px 0;
+    margin-bottom: 15px;
+}
+.art .img-art {
+    margin-right: 15px;
+    width: 100%;
+    max-width: 200px;
+}
+.art a {
+    display: block;
+    text-decoration: none;
+    color: #15222a;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid;
+    line-height: 25px;
+    width: 100px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 15px;
+    font-size: 12px;
     transition: 0.25s;
 }
-.redes-footer li i:hover {
-    transform: translateY(-5px);
+.art a:hover {
+    background-color: #00ae9a;
+    border-color: #00ae9a;
+    color: #d3d3d3;
 }
-.redes-footer .facebook i {
-    background-color: #3b5998;
+.art .autor {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    color: #58595b;
+    font-size: 14px;
 }
-.redes-footer .twitter i {
-    background-color: #26a6d1;
-}
-.redes-footer .github i {
-    background-color: black;
-}
-.redes-footer .linkedin i {
-    background-color: #0e76a8;
-}
+.art .autor .color-autor { color: #00365a; }
+.art .autor img { margin-left: 7px; }
 @media screen and (max-width: 1024px) {
     .container { width: 100%; }
     /*Menu*/
@@ -665,6 +772,16 @@ footer li {
     }
     .proyectos li, .proyectos img { max-width: 350px; }
     /*Portafolio*/
+    /*Blog*/
+    #blog header { margin-top: 0; }
+    #blog header img.logo-prin {margin-top: 50px; }
+    #blog .banner {background-position: center; }
+    .art-prin img { transform: scale(0.75); margin-top: 0; }
+    .art-prin { margin-top: 30px; }
+    .articulos { justify-content: center; }
+    .art { max-width: none; margin: 0 20px 50px 20px; }
+    .art-prin p { padding: 0 100px; }
+    /*Blog*/
 }
 @media screen and (max-width: 768px) {
     .menu { overflow: hidden; }
@@ -757,6 +874,16 @@ footer li {
     .frases i { font-size: 12px; }
     footer h3 { font-size: 18px; }
     /*Perfil*/
+    /*Blog*/
+    #blog header img.logo-prin { margin-top: 0; }
+    .art-prin p { padding: 0 30px; }
+    .art .img-art {
+        max-width: 100px;
+        overflow: hidden;
+    }
+    .art-prin { margin-top: 50px; }
+    #blog .banner {min-height: 515px; }
+    /*Blog*/
 }
 @media screen and (max-width: 320px) {
     header { padding: 10px; }
@@ -773,4 +900,12 @@ footer li {
     .intro-proy h2 { font-size: 40px; }
     .proyectos li, .proyectos img { max-width: 300px; }
     /*Portafolio*/
+    /*Blog*/
+    .art .img-art {
+        display: none;
+    }
+    .art {
+        min-height: 242px;
+    }
+    /*Blog*/
 }
