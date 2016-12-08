@@ -946,10 +946,12 @@ aside .otros-articulos, aside .proyectos-realizados {
 #articulo-apoyo iframe {
     margin: 30px auto;
     display: block;
+    max-width: 100%;
 }
 .articulo .contenido-general img.imagen-articulo {
     margin: 30px auto;
     display: block;
+    max-width: 100%;
 }
 @media screen and (max-width: 1024px) {
     .container { width: 100%; }
