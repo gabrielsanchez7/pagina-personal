@@ -218,7 +218,7 @@ ul.redes-sociales li{
     border-color: #00ae9a;
     color: #d3d3d3;
 }
-#perfil, #portafolio, #blog, #contacto {
+#perfil, #portafolio, #blog, #contacto, #articulo-flujo, #articulo-apoyo, #articulo-aprendizaje {
     font-family: 'Ubuntu', sans-serif;
     background-color: #f3f3f3;
     color: #15222a;
@@ -567,9 +567,10 @@ ul.redes-sociales li{
     color: #d3d3d3;
     margin-bottom: 30px;
     cursor: pointer;
-    border-radius: 10px;
 }
-.proyectos li a { color: #d3d3d3; }
+.proyectos li a {
+    color: #d3d3d3;
+}
 .proyectos .etiqueta-proy{
     position: absolute;
     display: flex;
@@ -629,6 +630,7 @@ ul.redes-sociales li{
 .art-prin a:hover {
     background-color: #00ae9a;
     border-color: #00ae9a;
+    color: white;
 }
 .art-prin img {
     margin: 50px auto;
@@ -693,7 +695,7 @@ ul.redes-sociales li{
 .art a:hover {
     background-color: #00ae9a;
     border-color: #00ae9a;
-    color: #d3d3d3;
+    color: white;
 }
 .art .autor {
     display: flex;
@@ -792,6 +794,163 @@ ul.redes-sociales li{
     justify-content: flex-end;
     text-align: right;
 }
+#articulo-flujo header, #articulo-apoyo header, #articulo-aprendizaje header {
+    background-color: #090e12;
+}
+.color-2 { color: #00365a; }
+.breadcrumb a {
+    text-decoration: none;
+    color: #58595b;
+}
+.breadcrumb {
+    color: #58595b;
+    margin: 40px auto;
+}
+#articulo-flujo h2, #articulo-apoyo h2, #articulo-aprendizaje h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+.autor-articulo {
+    display: flex;
+    align-items: center;
+    color: #58595b;
+    font-size: 14px;
+    margin: 10px auto;
+}
+.autor-articulo img {
+    margin-right: 10px;
+}
+.contenido-articulo {
+    width: 100%;
+    max-width: 850px;
+}
+.img-prin-art {
+    margin-bottom: 40px;
+    width: 100%;
+}
+.contenido-articulo p { margin: 15px auto; }
+.contenido-articulo h3 {
+    font-family: 'Montserrat';
+    font-size: 24px;
+    margin-top: 30px;
+}
+.contenido-articulo li {
+    list-style: inside;
+}
+.final-articulo {
+    font-size: 18px;
+    padding: 30px 0;
+    border-bottom: 2px solid;
+    text-align: center;
+}
+.final-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+.final-contenido div {
+    display: flex;
+    align-items: center;
+}
+.final-contenido p {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.color-3 { color: #58595b; }
+.nav-articulos {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px auto;
+}
+.nav-articulos a {
+    display: block;
+    border: 1px solid #58595b;
+    line-height: 30px;
+    width: 150px;
+    text-align: center;
+    border-radius: 15px;
+    color: #58595b;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    transition: 0.25s;
+}
+.nav-articulos a:hover {
+    background-color: #00ae9a;
+    border-color: #00ae9a;
+    color: white;
+    font-weight: 400;
+}
+.articulo .contenido-general {
+    display: flex;
+    justify-content: space-between
+}
+.articulo aside {
+    width: 100%;
+    max-width: 320px;
+}
+aside .otros-articulos, aside .proyectos-realizados {
+    text-align: center;
+    border: 1px solid #0c3b46;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.otros-articulos h4, .proyectos-realizados h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #0c3b46;
+    color: white;
+    padding: 20px 0;
+}
+.otros-articulos ul, .proyectos-realizados ul {
+    padding: 25px 0;
+}
+.otros-articulos li, .proyectos-realizados li {
+    list-style: none;
+    padding: 5px 0;
+}
+.otros-articulos a, .proyectos-realizados a {
+    text-decoration: none;
+    line-height: 40px;
+    color: #58595b;
+    display: block;
+    transition: 0.25s;
+}
+.otros-articulos a:hover, .proyectos-realizados a:hover {
+    background-color: rgba(165, 165, 165, 0.24);
+}
+.redes-aside h4, .contacto-aside h4 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    color: #00365a;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid;
+}
+.redes-aside li, .contacto-aside li { margin: 5px auto; }
+.redes-aside li i, .contacto-aside li i { text-align: center;}
+.redes-aside span {
+    margin-left: 10px;
+    color: #58595b;
+}
+.contacto-aside li { color: #58595b; }
+.redes-aside span:hover { text-decoration: underline; }
+.redes-aside a { text-decoration: none; }
+#articulo-apoyo iframe {
+    margin: 30px auto;
+    display: block;
+}
+.articulo .contenido-general img.imagen-articulo {
+    margin: 30px auto;
+    display: block;
+}
 @media screen and (max-width: 1024px) {
     .container { width: 100%; }
     /*Menu*/
@@ -875,6 +1034,19 @@ ul.redes-sociales li{
         width: 100%; }
     .formulario textarea { display: block; max-width: none; }
     /*Contacto*/
+    /*Articulos*/
+    .articulo header { margin-top: 0; }
+    .articulo header img.logo-prin { margin-top: 50px; }
+    .articulo .contenido-general { flex-direction: column; }
+    .articulo aside { max-width: none; }
+    /*Articulos*/
+    .articulo main { padding: 10px; box-sizing: border-box; }
+    .redes-aside ul, .contacto-aside ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .redes-aside h4 { margin: 0; }
+    .contacto-aside li:last-child { margin: 10px auto; }
 }
 @media screen and (max-width: 768px) {
     .menu { overflow: hidden; }
@@ -883,7 +1055,7 @@ ul.redes-sociales li{
         display: block;
         margin: 10px auto;
     }
-    .redes-footer ul { margin-top: 50px; }
+    .redes-footer ul { padding-top: 30px; }
     .frases p { font-size: 30px; margin: 0 20px; }
     .frases .frase1, .frases .frase2 {padding: 30px 50px;}
     .frases i { font-size: 14px; }
@@ -931,6 +1103,11 @@ ul.redes-sociales li{
     #portafolio header img.logo-prin { margin-top: 0; }
     .proyectos li, .proyectos img { max-width: 350px; }
     /*Portafolio*/
+    /*Articulos*/
+    .articulo header img.logo-prin { margin-top: 0; }
+    .final-contenido { flex-direction: column; }
+    .final-contenido div { margin-bottom: 20px; }
+    /*Articulos*/
 }
 @media screen and (max-width: 530px) {
     .etiqueta-principal .foto-personal {

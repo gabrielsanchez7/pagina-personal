@@ -27,6 +27,8 @@ var gestosTouch = new Hammer($body);
 gestosTouch.on('swipeleft', showMenu);
 gestosTouch.on('swiperight', hideMenu);
 
+// Slider de la página perfíl
+
 $(document).ready(function() {
     var banner = {
         padre: $('#slide-container'),
