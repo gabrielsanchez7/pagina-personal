@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0f0f0f;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+        }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            margin-bottom: 40px;
+            border-bottom: 1px solid;
+            padding: 30px 150px;
+        }
+        table.calculadora {
+            /*border: 1px solid white;*/
+        }
+        .calculadora #display {
+            height: 70px;
+        }
+        table td {
+            width: 70px;
+            text-align: center;
+        }
+        .signos {
+            background-color: #222222;
+        }
+        input[type="text"]{
+            width: 100%;
+            height: 100%;
+            border: none;
+            text-align: right;
+            padding: 0 10px;
+            font-size: 24px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: black;
+            color: white;
+        }
+        input[type="button"] {
+            font-family: 'Montserrat';
+            line-height: 51px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            transition: 0.25s;
+            font-size: 16px;
+        }
+        input[type="button"]:hover{
+            background-color: gray;
+        }
+        #igual {
+            height: 106px;
+        }
+        .numero {
+            background-color: #474747;
+        }
+    </style>
+</head>
+<body>
+    <h1>Proyecto : Calculadora</h1>
+    <table class="calculadora">
+        <tr>
+            <td colspan="4"><input type="text" value="0" id="display"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" value="C" class="signos" onclick="reiniciar()"></td>
+            <td><input type="button" value="/" class="signos" id="div" onclick="dividir()"></td>
+            <td><input type="button" value="x" class="signos" id="mult" onclick="multiplicar()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" class="numero" id="num7" onclick="displayNum(7)"></td>
+            <td><input type="button" value="8" class="numero" id="num8" onclick="displayNum(8)"></td>
+            <td><input type="button" value="9" class="numero" id="num9" onclick="displayNum(9)"></td>
+            <td><input type="button" value="-" class="signos" id="resta" onclick="resta()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" class="numero" id="num4" onclick="displayNum(4)"></td>
+            <td><input type="button" value="5" class="numero" id="num5" onclick="displayNum(5)"></td>
+            <td><input type="button" value="6" class="numero" id="num6" onclick="displayNum(6)"></td>
+            <td><input type="button" value="+" class="signos" id="suma" onclick="suma()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" class="numero" id="num1" onclick="displayNum(1)"></td>
+            <td><input type="button" value="2" class="numero" id="num2" onclick="displayNum(2)"></td>
+            <td><input type="button" value="3" class="numero" id="num3" onclick="displayNum(3)"></td>
+            <td rowspan="2"><input type="button" value="=" id="igual" class="signos" onclick="igual()"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" value="0" class="numero" id="num0" onclick="displayNum(0)"></td>
+            <td><input type="button" value="." class="signos"></td>
+        </tr>
+    </table>
+    <script>
+        var cifra = '';
+        var display = document.getElementById('display');
+        var acumulado = 0;
+        var pOperacion = true;
+        var sumar = false;
+        var restar = false;
+
+        function reiniciar(){
+            acumulado = 0;
+            display.value = 0;
+        }
+        function displayNum(numero){
+            display.value = cifra + numero;
+            cifra = display.value;
+        }
+
+        function suma() {
+            if (restar) {
+                acumulado = acumulado - parseInt(cifra);
+                display.value = acumulado;
+            }else {
+                acumulado = acumulado + parseInt(cifra);
+                display.value = acumulado;
+                cifra = '';
+                sumar = true;
+                restar = false;
+                pOperacion = false;
+            }
+        }
+        function resta() {
+            if (pOperacion == false) {
+                if (sumar) {
+                    acumulado = acumulado + parseInt(cifra);
+                    display.value = acumulado;
+                } else {
+                    acumulado = acumulado - parseInt(cifra);
+                    display.value = acumulado;
+                }
+            } else {
+                acumulado = parseInt(cifra);
+                pOperacion = false;
+            }
+            cifra = '';
+            sumar = false;
+            restar = true;
+        }
+        function igual() {
+            if (sumar) {
+                display.value = acumulado + parseInt(cifra);
+            } else if (restar) {
+                display.value = acumulado - parseInt(cifra);
+            }
+            acumulado = parseInt(display.value);
+            cifra = 0 ;
+        }
+        function multiplicar(){
+            acumulado = acumulado * parseInt(cifra);
+            display.value = acumulado;
+            cifra = '';
+        }
+
+    </script>
+</body>
+</html>

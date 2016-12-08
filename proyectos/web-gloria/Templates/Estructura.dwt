@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Gloria S.A.</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" href="../Css/normalize.css">
+<link rel="stylesheet" href="../Css/Estilos.css">
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+<div class="wrapper">
+<!--<h1>Gloria</h1>-->
+<header>
+<a href="../index.html"><img class="logop" src="../Img/Logo.png" alt="Ir al inicio"/></a>
+<ul class="buscador">
+	<li style="float:left">Buscar</li>
+	<li><a href="#"><img style="float:right" src="../Img/Buscador.png" alt="buscador"></a></li>
+</ul>
+<img class="redes" src="../Img/Redes-sociales.png" alt="Facebook - Twitter - YouTube"/>
+<ul class="menu">
+	<li><a href="nosotros.html">Nosotros</a></li>
+	<li><a href="productos.html">Productos</a></li>
+	<li><a href="blog.html">Blog</a></li>
+	<li><a href="#">Servicios</a></li>
+	<li><a href="#">Contacto</a></li>
+</ul>
+</header>
+<!-- TemplateBeginEditable name="Contenido" -->
+<!-- TemplateEndEditable -->
+<footer>
+<img class="logos" src="../Img/Logo-pie.png" alt=""/>
+<ul class="pie">
+	<li><span>Copyright © Gloria S.A. Todos los Derechos Reservados</span></li>
+	<li><a href="#">Mapa de sitio</a></li>
+	<li><a href="#">Términos y condiciones</a></li>
+	<li><a href="#">Políticas de privacidad</a></li>
+	<li><a href="#">Contáctanos</a></li>
+</ul>
+</footer>
+</div>
+</body>
+</html>
