@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Parallax</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Righteous|Ubuntu:400,400i,700" rel="stylesheet">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-image: url('../images/background-parallax.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding-bottom: 60px;
+    }
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+    }
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        padding: 30px;
+        background-color: rgba(84, 84, 84, 0.8);
+        color: #d3d3d3;
+        margin-bottom: 50px;
+    }
+    h2, h3 {
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 15px;
+    }
+    p {
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .row {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .col1, .col2 {
+        width: 50%;
+    }
+    .col3 {
+        width: 20%;
+    }
+    .col1 {
+        background-color: rgba(70, 117, 131, 0.5);
+        padding: 30px;
+    }
+    .col2 {
+        background-color: rgba(102, 48, 48, 0.5);
+        padding: 30px;
+    }
+    .col3 {
+        background-color: rgba(37, 87, 72, 0.5);
+        padding: 30px;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+
+        $(window).scroll(function(){
+            var barra = $(window).scrollTop();
+            var posicion = barra * 0.25;
+
+            $('body').css({
+                'background-position': '0 -' + posicion + 'px'
+            });
+        });
+
+    });
+    </script>
+</head>
+<body>
+    <h1>Ejercicio personal - Parallax</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col1">
+                <h2>Subtítulo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, ipsam in laboriosam aspernatur possimus, repudiandae ad fugiat sed dolorum! Vitae blanditiis laboriosam dolor quos possimus! Dolores porro, corrupti asperiores labore.</p><br>
+                <p>Officia dignissimos cum ullam atque. Laudantium vitae fugit enim eos libero error, dolore nam veritatis corporis minima animi dolorum distinctio cupiditate voluptates perferendis suscipit sed laboriosam obcaecati optio a voluptas!</p><br>
+                <p>Autem consectetur dolore excepturi aliquid adipisci, placeat provident, assumenda eaque modi nemo, corporis! Necessitatibus delectus consequatur, qui, dolor sunt similique, doloremque officia inventore molestiae dignissimos corporis incidunt impedit, eum ratione!</p>
+            </div>
+            <div class="col2">
+                <h2>Subtítulo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quaerat eum unde tempore sit, nostrum natus odio quia totam tenetur autem est obcaecati ut iste, incidunt fugit recusandae corporis ratione.</p><br>
+                <p>Dolore distinctio autem veniam deserunt doloremque nisi et est, earum dignissimos unde accusantium iusto libero id inventore quo. Quod, pariatur. Et facere enim eum beatae rerum ea id, a odit!</p><br>
+                <p>Quibusdam aspernatur assumenda ea, optio quaerat veniam voluptates tenetur modi mollitia nulla illo unde autem, quis similique error soluta, cum nemo velit. Quisquam doloribus sed modi voluptatem quasi quod odio.</p>
+            </div>
+            <div class="col2">
+                <h2>Subtítulo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, laudantium. Quas rerum debitis a quisquam velit doloribus fuga, perspiciatis quos ea. Illo inventore neque facere odio laboriosam vel quae sunt?</p><br>
+                <p>Nihil impedit fugit mollitia recusandae suscipit iste alias voluptates perspiciatis distinctio quas accusantium, porro voluptatum nostrum voluptate dolore error ex, vitae amet iusto sint consequatur ullam, hic non esse modi.</p><br>
+                <p>Ipsam pariatur nihil, quod fugiat perspiciatis error dolore sequi consequatur laudantium enim delectus tenetur quis, odit doloribus mollitia, consequuntur dolorum sapiente impedit rerum suscipit asperiores sit itaque, in accusantium. Distinctio.</p>
+            </div>
+            <div class="col1">
+                <h2>Subtítulo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis possimus voluptas esse veritatis iusto eum vero perferendis ullam minima ad nam placeat, sequi consequuntur, obcaecati, pariatur accusantium ipsam reiciendis modi.</p><br>
+                <p>Maiores eos molestiae dolor nobis amet itaque ex delectus necessitatibus, nulla labore asperiores ducimus quia deleniti nemo veniam dolorum, eveniet quas laboriosam pariatur adipisci laborum. Et neque, aperiam maiores aliquam.</p><br>
+                <p>Hic tenetur tempore molestiae, eius quisquam doloremque et animi accusamus natus voluptas nobis sit repellat aliquam cumque ullam quia. Fugit adipisci dicta illum nobis saepe enim, incidunt quaerat accusantium quibusdam.</p>
+            </div>
+            <div class="col1">
+                <h2>Subtítulo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, laudantium. Quas rerum debitis a quisquam velit doloribus fuga, perspiciatis quos ea. Illo inventore neque facere odio laboriosam vel quae sunt?</p><br>
+                <p>Nihil impedit fugit mollitia recusandae suscipit iste alias voluptates perspiciatis distinctio quas accusantium, porro voluptatum nostrum voluptate dolore error ex, vitae amet iusto sint consequatur ullam, hic non esse modi.</p><br>
+                <p>Ipsam pariatur nihil, quod fugiat perspiciatis error dolore sequi consequatur laudantium enim delectus tenetur quis, odit doloribus mollitia, consequuntur dolorum sapiente impedit rerum suscipit asperiores sit itaque, in accusantium. Distinctio.</p>
+            </div>
+            <div class="col2">
+                <h2>Subtítulo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis possimus voluptas esse veritatis iusto eum vero perferendis ullam minima ad nam placeat, sequi consequuntur, obcaecati, pariatur accusantium ipsam reiciendis modi.</p><br>
+                <p>Maiores eos molestiae dolor nobis amet itaque ex delectus necessitatibus, nulla labore asperiores ducimus quia deleniti nemo veniam dolorum, eveniet quas laboriosam pariatur adipisci laborum. Et neque, aperiam maiores aliquam.</p><br>
+                <p>Hic tenetur tempore molestiae, eius quisquam doloremque et animi accusamus natus voluptas nobis sit repellat aliquam cumque ullam quia. Fugit adipisci dicta illum nobis saepe enim, incidunt quaerat accusantium quibusdam.</p>
+            </div>
+            <div class="col2">
+                <h2>Subtítulo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, laudantium. Quas rerum debitis a quisquam velit doloribus fuga, perspiciatis quos ea. Illo inventore neque facere odio laboriosam vel quae sunt?</p><br>
+                <p>Nihil impedit fugit mollitia recusandae suscipit iste alias voluptates perspiciatis distinctio quas accusantium, porro voluptatum nostrum voluptate dolore error ex, vitae amet iusto sint consequatur ullam, hic non esse modi.</p><br>
+                <p>Ipsam pariatur nihil, quod fugiat perspiciatis error dolore sequi consequatur laudantium enim delectus tenetur quis, odit doloribus mollitia, consequuntur dolorum sapiente impedit rerum suscipit asperiores sit itaque, in accusantium. Distinctio.</p>
+            </div>
+            <div class="col1">
+                <h2>Subtítulo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis possimus voluptas esse veritatis iusto eum vero perferendis ullam minima ad nam placeat, sequi consequuntur, obcaecati, pariatur accusantium ipsam reiciendis modi.</p><br>
+                <p>Maiores eos molestiae dolor nobis amet itaque ex delectus necessitatibus, nulla labore asperiores ducimus quia deleniti nemo veniam dolorum, eveniet quas laboriosam pariatur adipisci laborum. Et neque, aperiam maiores aliquam.</p><br>
+                <p>Hic tenetur tempore molestiae, eius quisquam doloremque et animi accusamus natus voluptas nobis sit repellat aliquam cumque ullam quia. Fugit adipisci dicta illum nobis saepe enim, incidunt quaerat accusantium quibusdam.</p>
+            </div>
+        </div>
+        <aside class="col3">
+            <h3>Barra lateral</h3>
+            <ul>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Id commodi similique totam magni!</li>
+                <li>Velit quae numquam nesciunt dicta.</li>
+                <li>Asperiores delectus soluta officiis repudiandae!</li>
+                <li>Nulla quae eos, accusantium reiciendis.</li>
+                <li>Minus ipsum, laborum minima praesentium.</li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>
