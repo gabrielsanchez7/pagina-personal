@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj digital de 12 horas - JS</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-image: url('../images/background-reloj.jpg');
+        background-size: cover;
+        font-family: 'Oswald', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+    .wrap {
+        width: 1200px;
+        margin: auto;
+    }
+    .widget {
+        color: white;
+    }
+    .fecha, .reloj {
+        background-color: rgba(0, 0, 0, 0.5);
+        margin: 20px;
+        text-align: center;
+    }
+    .fecha {
+        line-height: 120px;
+        font-size: 40px;
+    }
+    .reloj {
+        font-size: 130px;
+    }
+    .fecha, .reloj {
+        padding: 50px;
+        max-width: 800px;
+        width: 100%;
+        margin: 20px auto;
+    }
+    .fecha p, .reloj p {
+        display: inline-block;
+    }
+    .caja-segundos {
+        display: inline-block;
+    }
+    .caja-segundos p {
+        display: block;
+        font-size: 0.45em;
+        line-height: 1.1em;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="widget">
+            <div class="fecha">
+                <p id="diaSemana" class="disSemana"></p>
+                <p id="dia" class="dia"></p>
+                <p>de </p>
+                <p id="mes" class="mes"></p>
+                <p>del </p>
+                <p id="year" class="year"></p>
+            </div>
+            <div class="reloj">
+                <p id="horas" class="horas"></p>
+                <p>: </p>
+                <p id="minutos" class="minutos"></p>
+                <p>: </p>
+                <div class="caja-segundos">
+                    <p id="ampm" class="ampm"></p>
+                    <p id="segundos" class="segundos"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+
+    $(document).ready(function() {
+
+        var actualizarHora = function(){
+            var fecha = new Date(),
+                horas = fecha.getHours(),
+                ampm,
+                minutos = fecha.getMinutes(),
+                diaSemana = fecha.getDay(),
+                dia = fecha.getDate(),
+                mes = fecha.getMonth(),
+                year = fecha.getFullYear();
+                segundos = fecha.getSeconds();
+
+            var pHoras = document.getElementById('horas'),
+                pAMPM = document.getElementById('ampm'),
+                pMinutos = document.getElementById('minutos'),
+                pSegundos = document.getElementById('segundos'),
+                pDiaSemana = document.getElementById('diaSemana'),
+                pDia = document.getElementById('dia'),
+                pMes = document.getElementById('mes'),
+                pYear = document.getElementById('year');
+
+            var semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+            pDiaSemana.textContent = semana[diaSemana];
+
+            pDia.textContent = dia;
+
+            var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Setiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+            pMes.textContent = meses[mes];
+
+            pYear.textContent = year;
+
+            if (horas >= 12) {
+                horas = horas - 12;
+                ampm = 'PM';
+            }else {
+                ampm = 'AM';
+            }
+
+            if (horas == 0) {
+                horas = 12;
+            }
+
+            pHoras.textContent = horas;
+            pAMPM.textContent = ampm;
+
+            if (horas < 10) {
+                horas = '0' + horas;
+            }
+            if (segundos < 10) {
+                segundos = '0' + segundos;
+            }
+
+            pMinutos.textContent = minutos;
+            pSegundos.textContent = segundos;
+
+
+        };
+
+        actualizarHora();
+
+        var intervalo = setInterval(actualizarHora, 1000);
+
+    });
+
+    </script>
+</body>
+</html>
