@@ -721,65 +721,31 @@ ul.redes-sociales li{
 .formulario .contactame div {
     display: flex;
     justify-content: space-between;
+    margin: 30px 0 60px 0;
 }
+.formulario .contactame a {
+    width: 50%;
+    background-color: #c2c2c2;
+    line-height: 60px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #090e12;
+    transition: 0.25s;
+    font-family: 'Montserrat', sans-serif;
+}
+.formulario .contactame a:hover {
+    background-color: #00ae9a;
+    color: white;
+}
+.contactame a.correo { margin-right: 10px; }
+.contactame a.tlf { margin-left: 10px; }
 .formulario h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     font-weight: 700;
     color: #58595b;
     margin-bottom: 20px;
-}
-.formulario label {
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-    color: #58595b;
-    padding-left: 10px;
-}
-.formulario input[type="text"] {
-    margin: 5px 0 20px 0;
-    min-width: 585px;
-    width: 100%;
-    line-height: 45px;
-    border-radius: 10px;
-    border: 1px solid #989898;
-    background-color: #f3f3f3;
-    font-size: 24px;
-    font-family: 'Ubuntu', sans-serif;
-    color: #58595b;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-.formulario input[type="text"]:focus, .formulario textarea:focus {
-    background-color: white;
-}
-.formulario textarea {
-    border: 1px solid #989898;
-    background-color: #f3f3f3;
-    border-radius: 10px;
-    margin-top: 5px;
-    font-size: 16px;
-    max-height: 138px;
-    max-width: 585px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 15px;
-    font-family: 'Ubuntu', sans-serif;
-    color: #58595b;
-}
-.formulario button {
-    display: block;
-    margin: 10px auto 30px auto;
-    line-height: 40px;
-    border-radius: 20px;
-    width: 150px;
-    border: none;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-    transition: 0.25s;
-}
-.formulario button:hover {
-    background-color: #00ae9a;
-    color: white;
 }
 .ubicacion {
     margin-bottom: 60px;
