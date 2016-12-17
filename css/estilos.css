@@ -527,6 +527,74 @@ ul.redes-sociales li{
     display: inline-block;
 }
 .color { color: #00ae9a; }
+.lightbox h3 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.lightbox ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.lightbox ul li {
+    list-style: none;
+}
+.lightbox li img {
+    cursor: pointer;
+    width: 200px;
+    margin: 10px;
+    transition: 0.25s;
+    border: 5px solid transparent;
+}
+.lightbox li img:hover {
+    border: 5px solid gray;
+}
+/*#lightbox {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+#lightbox .galeria div {
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: none;
+}
+#lightbox img {
+    width: 100%;
+    max-width: 1100px;
+}
+#lightbox .galeria div.active {
+    display: block;
+}
+.nav-lightbox span i {
+    background-color: black;
+    line-height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 15px 10px 15px 10px;
+    cursor: pointer;
+    transition: 0.25s;
+    z-index: 2;
+}
+.nav-lightbox span i:hover {
+    background-color: #d3d3d3;
+    color: black;
+}*/
 #portafolio { font-family: 'Ubuntu', sans-serif; }
 #portafolio .banner {
     background-image: url('../images/banner-portafolio.jpg');
@@ -998,9 +1066,7 @@ aside .otros-articulos, aside .proyectos-realizados {
     #contacto header { margin-top: 0; }
     #contacto header img.logo-prin { margin-top: 50px; }
     .formulario { padding: 0 10px; box-sizing: border-box; }
-    .formulario .contactame div { display: block;
-        width: 100%; }
-    .formulario textarea { display: block; max-width: none; }
+    .formulario .contactame a { font-size: 14px; }
     /*Contacto*/
     /*Articulos*/
     .articulo header { margin-top: 0; }
@@ -1031,6 +1097,15 @@ aside .otros-articulos, aside .proyectos-realizados {
     .intro-proy { flex-direction: column; }
     .intro-proy div { margin-bottom: 50px; }
     /*Portafolio*/
+    /*Contacto*/
+    .formulario .contactame div {
+        flex-direction: column;
+    }
+    .formulario .contactame a {
+        width: 100%;
+        margin: 10px auto;
+    }
+    /*Contacto*/
 }
 @media screen and (max-width: 667px) {
     header {
@@ -1125,7 +1200,7 @@ aside .otros-articulos, aside .proyectos-realizados {
     /*Contacto*/
     #contacto header img.logo-prin { margin-top: 0; }
     .formulario img { transform: scale(0.75); }
-    .formulario input[type="text"] { min-width: inherit ;}
+    .formulario .contactame a span { display: none; }
     /*Contacto*/
 }
 @media screen and (max-width: 320px) {

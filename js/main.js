@@ -118,4 +118,7 @@ $(document).ready(function() {
         $('#nav-circle').append('<span>');
     });
     $('#nav-circle').children('span').first().addClass('active');
+
+    $('.fancybox').fancybox();
+
 });
