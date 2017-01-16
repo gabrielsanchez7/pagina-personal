@@ -414,36 +414,34 @@ ul.redes-sociales li{
 .capacidades-tec ul {
     display: flex;
     justify-content: space-around;
-}
-.capacidades-tec ul {
-    display: flex;
-    justify-content: space-around;
     width: 100%;
     flex-wrap: wrap;
-}
-.capacidades-tec li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 25%;
-    min-width: 300px;
-    margin: 30px auto;
 }
 .capacidades-tec img {
     margin-bottom: 10px;
 }
-.capacidades-tec table {
-    margin: auto;
-    width: 100%;
-    flex-wrap: wrap;
-}
-.capacidades-tec li {
+.capacidades-tec li.tec-prin {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 25%;
     min-width: 300px;
     margin: 30px auto;
+}
+.capacidades-tec li.tec-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(1);
+    opacity: 0.6;
+    margin: 30px 0;
+}
+.capacidades-tec ul.tec-ter {
+    justify-content: center;
+}
+.capacidades-tec ul.tec-ter li {
+    margin: 30px 50px;
 }
 .capacidades-tec img {
     margin-bottom: 10px;
